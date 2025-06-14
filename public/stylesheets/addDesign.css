@@ -1,0 +1,9 @@
+main{
+ background-image: url(../images/assets/bg-grande.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+.formulario{
+  width: 200px;
+}

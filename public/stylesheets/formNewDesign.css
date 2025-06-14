@@ -1,0 +1,32 @@
+.formulario{
+  background-color: white;
+  padding: 50px;
+  width:50rem;
+  border-radius: 20px;
+ 
+
+  input{
+    background-color: #FCF3F4;
+    border: none;
+  }
+  
+  h2{
+  color:#EE94A6;
+  font-style: italic;
+  
+  }
+  .file-input-hidden{
+    display: none;
+  }
+  
+  .subir-img{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #EE94A6;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    
+  }
+}

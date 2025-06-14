@@ -1,0 +1,91 @@
+/* SECTION 1 */
+:root{
+  --color-shadow-title:0 0 5px #ff4d88, 0 0 10px #ff4d88, 0 0 15px #ff66b2,
+  0 0 20px #ff66b2;
+  --color-box-shadow:0 6px 18px #ff69b433, 0 4px 10px #00000026;
+  --color-rosa-title:  #ea8496;
+}
+
+.section1 {
+  .img-designer img {
+    width: 100%;
+    min-width: 300px;
+    max-width: 500px;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: var(--color-box-shadow);
+  }
+  button {
+    width: 200px;
+  }
+}
+
+.description {
+  max-width: 600px;
+  height: 400px;
+  margin-left: auto;
+  padding: 40px;
+
+  border-radius: 1.25rem;
+
+  line-height: 30px;
+
+  h1 {
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: var(--color-shadow-title);
+    font-style: italic;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  p {
+    font-size: 20px;
+    font-style: italic;
+  }
+
+  .btn-add {
+    font-size: 20px;
+  }
+}
+
+/* SECTION 2 */
+
+.section2 {
+  background-image: url(../images/assets/flores.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  margin-top: 20px;
+  .h2-color {
+    color: #fff;
+    text-shadow:var(--color-shadow-title);
+    font-style: italic;
+    margin-top: 20px;
+  }
+  .card {
+    width: 100%;
+    max-width: 300px;
+    border: 1px solid var(--color-rosa-title);
+    text-size-adjust: 10px;
+
+    .card-title {
+      color: var(--color-rosa-title);
+      font-style: italic;
+    }
+
+    box-shadow: var(--color-box-shadow);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+    
+    &:hover {
+      box-shadow: var(--color-box-shadow);
+      transform: translateY(-5px);
+    }
+  }
+
+  a {
+    color: #ff4d88;
+  }
+}

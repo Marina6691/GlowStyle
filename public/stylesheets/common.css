@@ -1,0 +1,106 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Roboto Mono", monospace;
+}
+
+
+:root{
+  --color-pink-button:#EE94A6;
+  --color-morado-btn: #6a4c7b;
+  --color-shadow-title:0 0 5px #ff4d88, 0 0 10px #ff4d88, 0 0 15px #ff66b2,
+  0 0 20px #ff66b2;
+  --color-box-shadow:0 6px 18px #ff69b433, 0 4px 10px #00000026;
+  --color-rosa-title:  #ea8496;
+}
+
+
+  
+
+
+main{
+  min-height: calc(100vh - 216px);
+}
+
+
+button, .button-rosa{
+  border: 2px solid var(--color-pink-button);
+  background-color: white;
+  border-radius: 20px;
+  padding: 5px 10px;
+  font-size: medium;
+  
+}
+button:hover{
+  background-color: var(--color-pink-button);
+  color: white;
+}
+/* ---- NAVBAR ---- */
+.navbar-estilos {
+  background: linear-gradient(90deg, #f4c2c2, #eec6d7); 
+  
+}
+
+/* el nav de Glowstyle */
+.navbar-brand{
+  color: white;
+  font-size: xx-large;
+  font-weight: bold;
+}
+.navbar-brand:hover{
+ color: var(--color-pink-button) ; 
+}
+
+/* enlace home */
+.nav-link{  
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+.nav-link:hover{  
+  color: var(--color-pink-button);
+}
+
+.log-here{
+  color: #EE94A6;
+}
+
+/* footer */
+
+footer {
+  background-color: #f7e3e9; 
+  color: #6a4c7b;
+  padding: 10px; 
+  border-top: 2px solid #e6a8b0; 
+
+  .container {
+    max-width:800px; 
+  }
+
+  .btn {
+   background-color: #f0c1d4; 
+   color: var(--color-morado-btn);
+   border-radius: 50%;
+   padding: 15px; 
+   transition: background-color 0.3s ease;
+  }
+  p {
+    color: var(--color-morado-btn); 
+    font-size: 14px;
+  }
+}
+
+.btn:hover {
+  background-color: #ee94a6; 
+  color: #f4c2c2;
+}
+
+
+ 
+
+
+

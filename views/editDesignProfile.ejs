@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="/stylesheets/editDesignProfile.css" />
+    <title>profile</title>
+    <%- include('modules/links.ejs') %>
+  </head>
+  <body>
+    <%- include('modules/navbar.ejs') %>
+    <main>
+     
+  
+      <div>
+      
+      <div class="container">
+        <div class="row justify-content-center">
+            <div class="col d-flex justify-content-center">
+                <div class="formulario">
+                    <form action="/design/editDesignProfilePost/<%=result.design_id%>/<%= result.designer_id%>" method="post" >
+                    <h2 class="text-center mb-4">Edit design</h2>
+
+                        <div class="mb-3">
+                            <label for="exampleInputTitle" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="exampleInputName" name="design_name" value="<%= result.design_name %>">
+                        </div>
+                        <div class="mb-3">
+                            <label for="genre" class="form-label">Gender</label>
+                            <select name="genre" id="genre" class="form-select">
+                                <option value="<%= result.genre %>"><%= result.genre %></option>
+                                <option value="Mujer">Female</option>
+                                <option value="Hombre">Male</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="fabric" class="form-label">Fabric</label>
+                            <select name="fabric" id="fabric" class="form-select">
+                                <option value="<%= result.fabric %>" ><%= result.fabric %></option>
+                                <option value="Algodón">Cotton</option>
+                                <option value="Poliéster">Polyester</option>
+                                <option value="Viscosa">Viscose</option>
+                                <option value="Lana">Wool</option>
+                                <option value="Lino">Linen</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="color" class="form-label">Color</label>
+                            <select name="color" id="color" class="form-select" >
+                                <option value="<%= result.color %>" ><%= result.color %></option>
+                                <option value="rojo">Red</option>
+                                <option value="azul cielo">Sky blue</option>
+                                <option value="azul">Blue</option>
+                                <option value="blanco">White</option>
+                                <option value="Piedra">Stone</option>
+                                <option value="Crudo">Raw</option>
+                                <option value="Índigo">Indigo</option>
+
+
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="prenda" class="form-label">Garment type</label>
+                            <select name="clothing_type" id="prenda" class="form-select" >
+                                <option value="<%= result.clothing_type %>"><%= result.clothing_type %></option>
+                                <option value="Camisa">Shirt</option>
+                                <option value="Bermuda">Bermuda</option>
+                                <option value="Vestido">Dress</option>
+                                <option value="Chaqueta">Jacket</option>
+                                <option value="Pantalón">Trousers</option>
+                                <option value="Camiseta">T-shirt</option>
+
+
+
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="descripcion" class="form-label">Description</label>
+                            <textarea id="descripcion" name="design_description" class="form-control" rows="4" placeholder="Escribe una descripción..." ><%=result.design_description %></textarea>
+                        </div>
+                       
+                       <button>Submit</button>
+                 <button class="button" onclick="window.location.href='/designer/profile/<%=result.designer_id%>'">cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
+    <%- include('modules/footer.ejs') %>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="stylesheets/common.css" />
+
+<link rel="stylesheet" href="/stylesheets/navbar.css" />
+<link rel="stylesheet" href="/stylesheets/register.css" />
+
+
+
+  <title>REGISTER</title>
+  <%- include('modules/links.ejs') %>
+  <%- include('modules/navbar.ejs') %>
+
+
+</head>
+<body>
+  <main>
+  
+<div class="section1-register">
+  <div class="formulario">
+    <form action="/designer/registerPost" method="post" enctype="multipart/form-data">
+      
+      <h2>Join here!</h2>
+      <div class="mb-3">
+        <label for="exampleInputName" class="form-label">Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputName"
+          aria-describedby="namelHelp"
+          name="name"
+        />
+        <label for="exampleInputLastname" class="form-label"
+        >Surname</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="exampleInputLastname"
+        aria-describedby="lastnameHelp"
+        name="lastname"
+      />
+      </div>
+      <div class="mb-3">
+       
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">E-mail</label>
+        <input
+          type="email"
+          class="form-control"
+          id="exampleInputEmail1"
+          aria-describedby="emailHelp"
+          name="email"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="descripcion" class="form-label">Description</label>
+        <textarea id="descripcion" name="designer_description" class="form-control" rows="4" placeholder="Write a description..." ></textarea>
+    </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label"
+          >Password</label
+        >
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          name="password"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword2" class="form-label"
+          >Re-enter Password</label
+        >
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword2"
+          name="repPassword"
+        />
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputImg" class="subir-img">Add your image</label>
+        <input type="file" class="file-input-hidden" id="exampleInputImg" name="img">
+    </div>
+      <div class="mb-3 form-check">
+        <input
+          type="checkbox"
+          class="form-check-input"
+          id="exampleCheck1"
+        />
+        <label class="form-check-label" for="exampleCheck1"
+          >I accept the terms and conditions</label
+        >
+      </div>
+      <p style="color: red"><%= message %></p>
+      <button type="submit">Submit</button>
+      <button
+        type="button"
+        onclick="window.location.href='/'"
+      >
+        Cancel
+      </button>
+      <p class="p-reg">Are you already registered?</p> <a class="log-here" href="/designer/loginForm">Log in here!</a>
+    </form>
+  </div>
+</div>
+  </main>
+  <%- include('modules/footer.ejs') %>
+
+</body>
+</html>

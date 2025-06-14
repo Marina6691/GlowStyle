@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/common.css" />
+    <link rel="stylesheet" href="/stylesheets/designProfile.css" />
+
+
+    <title></title>
+    <%- include('modules/links.ejs') %>
+    
+  </head>
+  <body>
+    <%- include('modules/navbar.ejs') %>
+    <main>
+      <header>
+        
+      </header>
+
+        <main>
+          <section>
+            <div class="container">
+              <div class="row d-flex justify-content-center align-items-center">
+                <div class="col">
+                  <div>
+                    <img
+                    src="/images/design/<%= result.design_img?result.design_img:'default-logo.webp' %>"
+                    class="card-img-top"
+                    alt="imagen_diseño"
+                                    />
+                                    
+                  </div>
+                </div>
+                <div class="col">
+                  <div>
+                    <h1 class="card-title"><%= result.design_name %></h1>
+                    <p class="card-text"><div class="negrita">Gender:</div> <%= result.genre %></p>
+                    <p class="card-text"><div class="negrita">Fabric:</div> <%= result.fabric %></p>
+                    <p class="card-text">
+                      <div class="negrita">Description:</div> <%= result.design_description %>
+                    </p>
+
+                    <div class="mb-3">
+                      
+                      <a
+                        href="/design/editDesignProfile/<%= result.design_id %>"
+                        class=""
+                        >Edit design</a
+                      >
+                    </div>
+                    <div>
+                      <a
+                        href="/design/elimLogic/<%= result.design_id %>/<%= result.designer_id %>"
+                        class=""
+                        >L. Deleted</a
+                      >
+                      <a
+                        href="/design/elimTotal/<%= result.design_id %>/<%= result.designer_id %>"
+                        class=""
+                        >T. deleted</a
+                      >
+                      <button onclick="window.location.href='/designer/profile/<%= result.designer_id%>'">Go Back</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+       
+     
+      
+    </main>
+    <%- include('modules/footer.ejs') %>
+   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js" integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+.formulario{
+  background-color: white;
+  padding: 50px;
+  width: 400px;
+  border-radius: 20px;
+  
+  margin-left: 20%;
+
+  input{
+    background-color: #FCF3F4;
+    border: none;
+  }
+}

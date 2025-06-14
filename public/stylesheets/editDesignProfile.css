@@ -1,0 +1,24 @@
+main{
+  background-image: url(../images/assets/foto1m.png);
+  background-repeat: no-repeat;
+  background-size: 28%;
+  background-position-y: center;
+}
+.formulario{
+  background-color: white;
+  padding: 50px;
+  width:50rem;
+  border-radius: 20px;
+ 
+
+  input{
+    background-color: #FCF3F4;
+    border: none;
+  }
+  
+  h2{
+  color:#EE94A6;
+  font-style: italic;
+  
+  }
+}

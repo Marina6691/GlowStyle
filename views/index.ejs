@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Home</title>
+    <link rel="stylesheet" href="stylesheets/index.css" />
+    <link rel="stylesheet" href="stylesheets/common.css" />
+
+    <%- include('modules/links.ejs') %>
+  </head>
+  <body>
+    <header
+
+     class="header"><%- include('modules/navbar.ejs') %>
+
+    </header>
+
+    <!-- SECTION 1 -->
+    <section class="section1">
+      <div class="section1-title">
+        <h1>Elevate your Style!</h1>
+        <p>Fashion is not just about clothes, it's a form of self-expression that speaks volumes without saying a word.</p>
+        <p class="p-2"> Explore the world of fashion, where every piece tells a story and every outfit is an opportunity to showcase who you are.</p>
+       
+      </div>
+    </section>
+
+<!-- SECTION 2 -->
+
+    <section class="section2">
+      <div class="container mt-5">
+        <div class="row">
+          <h2 class="text-center title-h2">MEET OUR STYLITS!</h2>
+          <% result.forEach((elem) => { %>
+          <div class="col-sm-12 col-md-6 col-lg-4 ">
+            <a class="card" href="/designer/profile/<%=elem.designer_id%>">
+              <img
+                src="/images/designers/<%= elem.designer_img?elem.designer_img:'default.jpg' %>"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-artist">
+                <h3 class="card-name"><%= elem.designer_name %></h3>
+                <p class="card-description"><%= elem.designer_description %></p>
+                
+              </div>
+            </a>
+          </div>
+          <% }) %>
+        </div>
+      </div>
+    </section>
+  <!-- SECTION 3 -->
+
+    <section class="section3">
+
+      <div class="col d-flex justify-content-center">
+        <div class="section3-title">
+          <h1>We’re originators, innovators, and style stars.</h1>
+         <p>Our fashion stylists are talented professionals who enhance every look with creativity, precision, and a deep sense of style.</p>
+        </div>
+      </div>
+
+    </section>
+  
+    <%- include('modules/footer.ejs') %>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YUe2LzesAfftltw+PEaao2tjU/QATaW/rOitAq67e0CT0Zi2VVRL0oC4+gAaeBKu"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
